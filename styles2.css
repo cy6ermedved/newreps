@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url('backgr.jpg') center/cover no-repeat fixed;
 }
 
 /* Контейнер для всей страницы */
@@ -36,7 +37,7 @@ body {
     background: #1e1e1e;
     padding: 35px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 25px rgb(0, 0, 0);
     position: sticky;
     top: 20px;
     height: auto;
@@ -91,6 +92,7 @@ body {
     margin-left: 20px;
     width: 100%;
     color: white;
+    border: 2px solid rgba(255, 105, 180, 0.5);
 }
 
 
@@ -148,6 +150,7 @@ body {
     max-width: 600px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     transition: all 0.3s;
+    border: 2px solid rgba(255, 105, 180, 0.5);
 }
 
 .service-item:hover {
@@ -174,6 +177,7 @@ body {
     max-width: 600px;
     margin: 40px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 105, 180, 0.5);
 }
 
 .contact-container h2 {
@@ -331,8 +335,8 @@ body {
     transform: scale(1.1);
 }
 
-/* Кнопки управления каруселью */
-.prev-btn, .next-btn {
+/* Кнопки управления каруселью для #wash*/
+#wash .prev-btn,#wash .next-btn {
     position: absolute;
     top: 75%;
     transform: translateY(-50%);
@@ -348,13 +352,104 @@ body {
 }
 
 
-.prev-btn:hover, .next-btn:hover {
+#wash .prev-btn:hover, #wash .next-btn:hover {
     background: #ff4081;
 }
 
-.prev-btn { left: 600px; }
-.next-btn { right: 610px; }
+#wash .prev-btn { left: 600px; }
+#wash .next-btn { right: 610px; }
+/* Кнопки управления каруселью для #polish*/
+#polish .prev-btn,#polish .next-btn {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-50%);
+    background: #ff69b4;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 10;
+}
 
+
+#polish .prev-btn:hover, #polish .next-btn:hover {
+    background: #ff4081;
+}
+
+#polish .prev-btn { left: 600px; }
+#polish .next-btn { right: 610px; }
+/* Кнопки управления каруселью для #ceramic*/
+#ceramic .prev-btn,#ceramic .next-btn {
+    position: absolute;
+    top: 71%;
+    transform: translateY(-50%);
+    background: #ff69b4;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+
+#ceramic .prev-btn:hover, #ceramic .next-btn:hover {
+    background: #ff4081;
+}
+
+#ceramic .prev-btn { left: 600px; }
+#ceramic .next-btn { right: 610px; }
+/* Кнопки управления каруселью для #chemyinter*/
+#chemyinter .prev-btn,#chemyinter .next-btn {
+    position: absolute;
+    top: 77%;
+    transform: translateY(-50%);
+    background: #ff69b4;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+
+#chemyinter .prev-btn:hover, #chemyinter .next-btn:hover {
+    background: #ff4081;
+}
+
+#chemyinter .prev-btn { left: 600px; }
+#chemyinter .next-btn { right: 610px; }
+/* Кнопки управления каруселью для #graviy*/
+#graviy .prev-btn,#graviy .next-btn {
+    position: absolute;
+    top: 79%;
+    transform: translateY(-50%);
+    background: #ff69b4;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+
+#graviy .prev-btn:hover, #graviy .next-btn:hover {
+    background: #ff4081;
+}
+
+#graviy .prev-btn { left: 600px; }
+#graviy .next-btn { right: 610px; }
 /* Стиль кнопки "Назад" */
 .back-btn {
     display: inline-block;
