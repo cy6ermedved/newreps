@@ -1,0 +1,376 @@
+/* Общий стиль */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Контейнер для всей страницы */
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 300px;
+    gap: 50px;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    max-width: 350px;
+    height: auto;
+}
+
+
+/* Стили для бокового меню */
+.sidebar {
+    width: 350px;
+    background: #1e1e1e;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 20px;
+    height: auto;
+}
+
+.sidebar h3 {
+    color: #ff69b4;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 35px;
+}
+
+.service-btn {
+    display: block;
+    text-decoration: none;
+    background: #ff69b4;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.service-btn:hover {
+    background: #ff4081;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+}
+
+/* Стили секции HERO */
+.hero {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: url('phhead.png') center/cover no-repeat; /* Укажи свой файл */
+    border-radius: 10px;
+    margin-left: 20px;
+    width: 100%;
+    color: white;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero a {
+    text-decoration: none;
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero a:hover {
+    background-color: #ff4090;
+    transform: scale(1.05);
+}
+
+/* Центрирование услуг и добавление отступов */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+        gap: 30px; /* Отступ между колонками */
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+}
+
+.service-item {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    width: 92%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
+}
+
+.service-item h3 {
+    font-size: 24px;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 18px;
+    color: #ccc;
+}
+/* Стили для секции "Контакты" */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-container h2 {
+    font-size: 32px;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact button {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border: none;
+    background: #ff69b4;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact button:hover {
+    background: #ff4081;
+    transform: scale(1.05);
+}
+.about {
+    background: #1e1e1e;
+    padding: 60px;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 105, 180, 0.5);
+}
+
+.about h2 {
+    font-size: 30px;
+    color: #ff69b4;
+    margin-bottom: 45px;
+    
+}
+
+.about p {
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.6;
+}
+/* Стили контейнера услуги */
+.service-container {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 40px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовки */
+.service-container h1 {
+    color: #ff69b4;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Стили цен */
+.service-prices {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+.service-prices li {
+    background: #2a2a2a;
+    padding: 10px;
+    margin: 5px auto;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+/* Карусель */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Стили для картинок */
+.carousel img {
+    width: 250px; /* Увеличиваем размер фото */
+    max-height: 180px; /* Делаем высоту адаптивной */
+    object-fit: cover; /* Фото не будет растягиваться */
+    border-radius: 10px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.carousel img:hover {
+    border-color: #ff69b4;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+    transform: scale(1.1);
+}
+
+/* Кнопки управления каруселью */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 75%;
+    transform: translateY(-50%);
+    background: #ff69b4;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+
+.prev-btn:hover, .next-btn:hover {
+    background: #ff4081;
+}
+
+.prev-btn { left: 600px; }
+.next-btn { right: 610px; }
+
+/* Стиль кнопки "Назад" */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background: #ff69b4;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-btn:hover {
+    background: #ff4081;
+    transform: scale(1.05);
+}
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название услуги | Cyber Car Detailing</title>
+    <link rel="stylesheet" href="../styles2.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../logo.png" alt="Cyber Car Detailing">
+            </a>
+        </div>
+    </header>
+
+    <div class="service-container">
+        <h1>Экспресс химчистка</h1>
+        <p class="service-description">Очистка сидений и ворсовых ковриков без сушки</p>
+        <h1>Стандартная химчистка</h1>
+        <p class="service-description"> Очистка основных элементов салона: сидений, ковриков, обивки, с сушкой без удаления запахов.</p>
+        <h1>Комплексная химчистка</h1>
+        <p class="service-description">Полный уход за салоном автомобиля: чистка всех поверхностей, пылесоска, дезодорация и восстановление внешнего вида.</p>
+
+        <h2>Цены</h2>
+        <ul class="service-prices">
+            <li>Экспресс - 1200 грн</li>
+            <li>Базовая - 2000 грн</li>
+            <li>Комплекс - 5500 грн</li>
+        </ul>
+
+        <h2>Наши работы:</h2>
+        <div class="carousel">
+            
+            <div class="carousel-track">
+                <img src="../photo/chemyinter1.png" alt="Работа 1">
+                <img src="../photo/chemyinter2.png" alt="Работа 2">
+                <img src="../photo/chemyinter3.png" alt="Работа 3">
+                <img src="../photo/chemyinter4.png" alt="Работа 4">
+                <img src="../photo/chemyinter5.png" alt="Работа 5">
+            </div>
+        </div>
+        
+        <button class="prev-btn">‹</button>
+        <button class="next-btn">›</button>
+
+        <a href="../index2.html" class="back-btn">Назад</a>
+    </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (index < track.children.length - 1) index++;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) index--;
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>
