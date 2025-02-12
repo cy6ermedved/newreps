@@ -472,34 +472,82 @@ body {
     transform: scale(1.05);
 }
 @media (max-width: 768px) {
+    /* Исправляем фон */
+    body {
+        background: url('backgr.jpg') center/cover no-repeat fixed;
+        background-attachment: scroll;
+    }
+
+    /* Главный контейнер */
     .main-container {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        margin-top: 50px;
+        margin-top: 20px;
+        gap: 20px;
     }
 
+    /* Логотип */
+    .logo img {
+        max-width: 250px;
+    }
+
+    /* Сайдбар */
     .sidebar {
-        width: 100%;
-        padding: 15px;
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
         text-align: center;
+        position: relative;
+        margin: 0 auto 20px;
     }
 
+    /* Hero */
     .hero {
         padding: 40px 15px;
         min-height: auto;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
     }
 
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    /* Секция "О нас" */
+    .about {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Список услуг */
     .service-list {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        width: 90%;
+        margin: 0 auto;
     }
 
+    .service-item {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* Контактная форма */
     .contact {
         width: 90%;
+        max-width: 500px;
         text-align: center;
         margin: 0 auto;
     }
+
+    .contact input, .contact textarea, .contact button {
+        width: 100%;
+    }
 }
+
