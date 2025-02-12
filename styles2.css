@@ -468,3 +468,52 @@ body {
     background: #ff4081;
     transform: scale(1.05);
 }
+@media (max-width: 768px) {
+    body {
+        background: url('backgr.jpg') center/contain no-repeat;
+    }
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        min-width: 250px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 15px;
+        min-height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    .about, .services, .contact {
+        text-align: center;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .service-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .service-btn {
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+        .contact {
+            width: 90%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+        .contact input, .contact textarea, .contact button {
+            width: 100%;
+        }
+    }
+    
+}
+
