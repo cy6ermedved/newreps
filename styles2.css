@@ -468,35 +468,3 @@ body {
     background: #ff4081;
     transform: scale(1.05);
 }
-/* Стили для телефонов */
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .input-group {
-        width: 100%;
-    }
-
-    textarea {
-        height: 80px;
-    }
-
-    button {
-        width: 100%;
-        padding: 15px;
-    }
-}
-
-/* Стили для планшетов */
-@media (min-width: 601px) and (max-width: 1024px) {
-    body {
-        font-size: 16px;
-    }
-
-    .input-group {
-        margin-bottom: 15px;
-    }
-}
-
