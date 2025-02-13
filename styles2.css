@@ -475,7 +475,8 @@ body {
     /* Исправляем фон */
     body {
         background: url('backgr.jpg') center/cover no-repeat fixed;
-        background-attachment: scroll;
+        background-attachment: fixed;
+        margin: auto;
     }
 
     /* Главный контейнер */
@@ -499,21 +500,21 @@ body {
 
     /* Сайдбар */
     .sidebar {
-            width: 90%;
-            max-width: 350px;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            margin: 200px auto 20px; /* Отступ сверху, чтобы не закрывал логотип */
+        width: 80%;
+        max-width: 350px;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        margin: 2px;
     }
 
     /* Hero */
     .hero {
         padding: 40px 15px;
         min-height: auto;
-        width: 90%;
+        width: 80%;
         text-align: center;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 
     .hero h1 {
@@ -522,9 +523,9 @@ body {
 
     /* Секция "О нас" */
     .about {
-        width: 90%;
+        width: 60%;
         max-width: 600px;
-        margin: 0 auto;
+        margin: 2px;
         text-align: center;
     }
 
@@ -534,7 +535,7 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
     }
 
@@ -545,7 +546,7 @@ body {
 
     /* Контактная форма */
     .contact {
-        width: 90%;
+        width: 80%;
         max-width: 500px;
         text-align: center;
         margin: 0 auto;
@@ -554,5 +555,64 @@ body {
     .contact input, .contact textarea, .contact button {
         width: 100%;
     }
+        /* Контейнер услуг */
+        .service-container {
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+    
+        /* Заголовки и текст */
+        .service-container h1 {
+            font-size: 24px;
+        }
+    
+        .service-container p {
+            font-size: 16px;
+        }
+    
+        /* Цены */
+        .service-prices {
+            font-size: 16px;
+        }
+    
+        /* Карусель */
+        .carousel {
+            max-width: 100%;
+        }
+    
+        .carousel-track {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+    
+        .carousel img {
+            width: 120px;
+            height: auto;
+            border-radius: 8px;
+        }
+    
+        /* Кнопки карусели */
+        .prev-btn, .next-btn {
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 8px;
+            font-size: 18px;
+        }
+    
+        .prev-btn { left: 5px; }
+        .next-btn { right: 5px; }
+    
+        /* Кнопка "Назад" */
+        .back-btn {
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 20px auto;
+            text-align: center;
+        }
 }
 
