@@ -488,18 +488,23 @@ body {
     }
 
     /* Логотип */
+    .logo {
+        position: relative;
+        z-index: 10; /* Логотип всегда сверху */
+    }
+
     .logo img {
         max-width: 250px;
     }
 
     /* Сайдбар */
     .sidebar {
-        width: 90%;
-        max-width: 350px;
-        padding: 20px;
-        text-align: center;
-        position: relative;
-        margin: 0 auto 20px;
+            width: 90%;
+            max-width: 350px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            margin: 200px auto 20px; /* Отступ сверху, чтобы не закрывал логотип */
     }
 
     /* Hero */
