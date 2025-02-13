@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название услуги | Cyber Car Detailing</title>
+    <link rel="stylesheet" href="../styles2.css">
+</head>
+<body id="polish">
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../logo.png" alt="Cyber Car Detailing">
+            </a>
+        </div>
+    </header>
+
+    <div class="service-container">
+        <h1>Техническая полировка</h1>
+        <p class="service-description">Быстрая полировка для устранения мелких царапин и восстановления блеска кузова или фар.</p>
+        <h1>Стандартная полировка</h1>
+        <p class="service-description">Полировка с удалением окисления и мелких дефектов, плюс защита и стойкий блеск.</p>
+        <h1>Глубокая полировка</h1>
+        <p class="service-description">Полировка для удаления глубоких царапин, восстановления цвета и защиты покрытия на долгое время.</p>
+
+        <h2>Цены</h2>
+        <ul class="service-prices">
+            <li>Техническая полировка - 2500 грн</li>
+            <li>Стандартная полировка - 6000 грн</li>
+            <li>Глубокая полировка - 9300 грн</li>
+        </ul>
+
+        <h2>Наши работы:</h2>
+        <div class="carousel">
+            
+            <div class="carousel-track">
+                <img src="../photo/polish1.png" alt="Работа 1">
+                <img src="../photo/polish2.png" alt="Работа 2">
+                <img src="../photo/polish3.png" alt="Работа 3">
+                <img src="../photo/polish4.png" alt="Работа 4">
+                <img src="../photo/polish5.png" alt="Работа 5">
+            </div>
+        </div>
+        
+        <button class="prev-btn">‹</button>
+        <button class="next-btn">›</button>
+
+        <a href="../index2.html" class="back-btn">Назад</a>
+    </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (index < track.children.length - 1) index++;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) index--;
+            updateCarousel();
+        });
+    </script>
+</body id="polish">
+</html>

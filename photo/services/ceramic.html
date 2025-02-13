@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название услуги | Cyber Car Detailing</title>
+    <link rel="stylesheet" href="../styles2.css">
+</head>
+<body id="ceramic">
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../logo.png" alt="Cyber Car Detailing">
+            </a>
+        </div>
+    </header>
+
+    <div class="service-container">
+        <h1>Керамика лакокрасочного покрытия</h1>
+        <p class="service-description">Нанокерамика для кузова автомобиля
+            Нанокерамика — это современная защита кузова, создающая на его поверхности прочный защитный слой, который защищает от загрязнений, воды, химических воздействий и мелких царапин. Этот слой обладает высокой водоотталкивающей способностью, что позволяет грязи и воде не задерживаться на кузове и легко смываться при дождь. Нанокерамика значительно упрощает уход за автомобилем, сохраняя его внешний вид и создавая глубокий, стойкий блеск..
+            Преимущества нанокерамики:
+
+            Долговечная защита кузова (до 3 лет в зависимости от условий эксплуатации).
+            Устойчивость к химическим загрязнениям, солям и кислотам.
+            Протектор от мелких царапин и дефектов.
+            Легкость в уходе, минимизация времени на мойку.</p>
+        <h2>Цены</h2>
+        <ul class="service-prices">
+            <li>Седан - 2500 грн</li>
+            <li>Кроссовер - 4000 грн</li>
+            <li>Джип - 6500 грн</li>
+        </ul>
+
+        <h2>Наши работы:</h2>
+        <div class="carousel">
+            
+            <div class="carousel-track">
+                <img src="../photo/ceramic1.png" alt="Работа 1">
+                <img src="../photo/ceramic2.png" alt="Работа 2">
+                <img src="../photo/ceramic3.png" alt="Работа 3">
+                <img src="../photo/ceramic4.png" alt="Работа 4">
+                <img src="../photo/ceramic5.png" alt="Работа 5">
+            </div>
+        </div>
+        
+        <button class="prev-btn">‹</button>
+        <button class="next-btn">›</button>
+
+        <a href="../index2.html" class="back-btn">Назад</a>
+    </div>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (index < track.children.length - 1) index++;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (index > 0) index--;
+            updateCarousel();
+        });
+    </script>
+</body id="ceramic">
+</html>
