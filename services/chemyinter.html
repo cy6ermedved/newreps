@@ -31,41 +31,41 @@
         </ul>
 
         <h2>Наши работы:</h2>
-        <div class="carousel">
-            
-            <div class="carousel-track">
-                <img src="../photo/chemyinter1.png" alt="Работа 1">
-                <img src="../photo/chemyinter2.png" alt="Работа 2">
-                <img src="../photo/chemyinter3.png" alt="Работа 3">
-                <img src="../photo/chemyinter4.png" alt="Работа 4">
-                <img src="../photo/chemyinter5.png" alt="Работа 5">
-            </div>
+        <div class="gallery">
+            <img src="../photo/chemyinter1.png" alt="Работа 1">
+            <img src="../photo/chemyinter2.png" alt="Работа 2">
+            <img src="../photo/chemyinter3.png" alt="Работа 3">
+            <img src="../photo/chemyinter4.png" alt="Работа 4">
+            <img src="../photo/chemyinter5.png" alt="Работа 5">
         </div>
-        
-        <button class="prev-btn">‹</button>
-        <button class="next-btn">›</button>
-
-        <a href="../index2.html" class="back-btn">Назад</a>
+      <a href="../index2.html" class="back-btn">Назад</a>
     </div>
-
-    <script>
+ <script>
         const track = document.querySelector('.carousel-track');
         const prevBtn = document.querySelector('.prev-btn');
         const nextBtn = document.querySelector('.next-btn');
-
+    
+        const slidesToShow = 3; // Количество видимых слайдов
+        const totalSlides = track.children.length; // Общее количество слайдов (5)
         let index = 0;
-
+    
         function updateCarousel() {
-            track.style.transform = `translateX(${-index * 100}%)`;
+            const slideWidth = 100 / slidesToShow; // Ширина одного слайда в процентах
+            track.style.transform = `translateX(${-index * slideWidth}%)`;
         }
-
+    
         nextBtn.addEventListener('click', () => {
-            if (index < track.children.length - 1) index++;
+            // Максимальный индекс: когда последние 3 слайда видны
+            if (index < totalSlides - slidesToShow) {
+                index++;
+            }
             updateCarousel();
         });
-
+    
         prevBtn.addEventListener('click', () => {
-            if (index > 0) index--;
+            if (index > 0) {
+                index--;
+            }
             updateCarousel();
         });
     </script>

@@ -19,11 +19,11 @@
         <aside class="sidebar">
             <h3>Каталог услуг</h3>
             <ul>
-                <li><a href="#washing" class="service-btn">Мойка</a></li>
-                <li><a href="#deep-cleaning" class="service-btn">Химчистка</a></li>
-                <li><a href="#polishing" class="service-btn">Полировка</a></li>
-                <li><a href="#nano-ceramic" class="service-btn">Нано-керамика</a></li>
-                <li><a href="#protective-films" class="service-btn">Бронеплёнка</a></li>
+                <li><a href="services/wash.html" class="service-btn">Мойка</a></li>
+                <li><a href="services/chemyinter.html" class="service-btn">Химчистка</a></li>
+                <li><a href="services/polish.html" class="service-btn">Полировка</a></li>
+                <li><a href="services/ceramic.html" class="service-btn">Нано-керамика</a></li>
+                <li><a href="services/graviy.html" class="service-btn">Бронеплёнка</a></li>
             </ul>
         </aside>
 
@@ -31,64 +31,35 @@
         <section class="hero">
             <h1>Добро пожаловать в Cyber Car Detailing</h1>
             <p>Профессиональный уход за вашим автомобилем. Дарим клиентам яркие и теплые эмоции.</p>
-            <a href="#services">Узнать больше</a>
         </section>
     </div>
-            <!-- О нас -->
-            <section id="about" class="about">
-                <h2>Полезная информация про нас!</h2>
-                <p>Мы — компания Cyber Car Detailing, специализирующаяся на профессиональном уходе за автомобилями. Уже 5 лет на рынке и с опытом работы более 10 лет. Предоставляем полный спектр услуг: мойка, полировка, химчистка, нано-керамика, оклеивание бронепленкой. Используя современные технологии и передовое оборудование, мы гарантируем высокое качество работы и надежность. Мы ценим доверие наших клиентов и всегда стремимся к максимальному удовлетворению ваших потребностей в уходе за автомобилем.</p>
-            </section>
-    <!-- Услуги -->
-    <section id="services" class="services">
-        <h2>Наши услуги</h2>
-        <div class="service-list">
-            <div id="washing" class="service-item">
-                <h3>Мойка</h3>
-                <p>чистый автомобиль - неотъемлемая часть ухода за автомобилем</p>
-                <a href="services/wash.html" class="service-btn">Подробнее</a>
+    <div class="sections-container">
+        <!-- Контакты -->
+        <section id="contact" class="contact">
+            <div class="contact-container">
+                <h2>Свяжитесь с нами</h2>
+                <p>Оставьте свои данные, и мы вам перезвоним!</p>
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" placeholder="Ваш номер телефона (+380)" required pattern="\+380[0-9]{9}">
+                    </div>                
+                    <div class="input-group">
+                        <textarea placeholder="Ваше сообщение" required></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </form>
             </div>
-            <div id="deep-cleaning" class="service-item">
-                <h3>Химчистка</h3>
-                <p>Глубокая чистка салона для идеальной чистоты.</p>
-                <a href="services/chemyinter.html" class="service-btn">Подробнее</a>
-            </div>
-            <div id="polishing" class="service-item">
-                <h3>Полировка</h3>
-                <p>Не стоит показывать небрежное отношение к автомобилю.</p>
-                <a href="services/polish.html" class="service-btn">Подробнее</a>
-            </div>
-            <div id="nano-ceramic" class="service-item">
-                <h3>Нано-керамика</h3>
-                <p>Защитное покрытие для максимального блеска и легкости в дальнейшей мойке.</p>
-                <a href="services/ceramic.html" class="service-btn">Подробнее</a>
-            </div>
-            <div id="protective-films" class="service-item">
-                <h3>Защитные плёнки</h3>
-                <p>Прозрачная защита ЛКП от вненших вредителей.</p>
-                <a href="services/graviy.html" class="service-btn">Подробнее</a>
-            </div>
-        </div>
-          </section>
-    <!-- Контакты -->
-       <section id="contact" class="contact">
-        <div class="contact-container">
-            <h2>Свяжитесь с нами</h2>
-            <p>Оставьте свои данные, и мы вам перезвоним!</p>
-            <form>
-                <div class="input-group">
-                    <input type="text" placeholder="Ваше имя" required>
-                </div>
-                <div class="input-group">
-                    <input type="tel" placeholder="Ваш номер телефона (+380)" required pattern="\+380[0-9]{9}">
-                </div>                
-                <div class="input-group">
-                    <textarea placeholder="Ваше сообщение" required></textarea>
-                </div>
-                <button type="submit">Отправить</button>
-            </form>
-        </div>
-    </section>
+        </section>
+    
+        <!-- О нас -->
+        <section id="about" class="about">
+            <h2>Полезная информация про нас!</h2>
+            <p>Мы — компания Cyber Car Detailing, специализирующаяся на профессиональном уходе за автомобилями. Уже 5 лет на рынке и с опытом работы более 10 лет. Предоставляем полный спектр услуг: мойка, полировка, химчистка, нано-керамика, оклеивание бронепленкой. Используя современные технологии и передовое оборудование, мы гарантируем высокое качество работы и надежность. Мы ценим доверие наших клиентов и всегда стремимся к максимальному удовлетворению ваших потребностей в уходе за автомобилем.</p>
+        </section>
+    </div>
 
 
     <footer>

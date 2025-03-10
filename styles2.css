@@ -126,63 +126,51 @@ body {
     background-color: #ff4090;
     transform: scale(1.05);
 }
-
-/* Центрирование услуг и добавление отступов */
-.services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    text-align: center;
+/* Стили для контейнера двух секций */
+.sections-container {
+    display: flex; /* Включаем Flexbox */
+    justify-content: space-between;
+    gap: 40px; /* Расстояние между секциями */
+    max-width: 1400px; /* Ограничение общей ширины контейнера */
+    margin: 40px auto; /* Центрирование контейнера */
+    flex-wrap: wrap; /* Если экран узкий, секции переносятся */
 }
 
-.service-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Две колонки */
-        gap: 30px; /* Отступ между колонками */
-        justify-content: center;
-        max-width: 1200px;
-        margin: 0 auto;
-}
-
-.service-item {
-    background: #1e1e1e;
-    padding: 25px;
-    border-radius: 12px;
-    width: 92%;
-    max-width: 600px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s;
-    border: 2px solid rgba(255, 105, 180, 0.5);
-}
-
-.service-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.3);
-}
-
-.service-item h3 {
-    font-size: 24px;
-    color: #ff69b4;
-    margin-bottom: 10px;
-}
-
-.service-item p {
-    font-size: 18px;
-    color: #ccc;
-}
-/* Стили для секции "Контакты" */
+/* Стили для секции Contact */
 .contact {
     padding: 50px 20px;
     text-align: center;
     background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
     border-radius: 10px;
-    max-width: 600px;
-    margin: 40px auto;
+    max-width: 600px; /* Сохраняем фиксированную ширину */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 105, 180, 0.5);
 }
 
+/* Стили для секции About */
+.about {
+    background: #1e1e1e;
+    padding: 60px;
+    max-width: 750px; 
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 105, 180, 0.5);
+}
+
+.about h2 {
+    font-size: 30px;
+    color: #ff69b4;
+    margin-bottom: 45px;
+}
+
+.about p {
+    font-size: 20px;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Остальные стили для contact остаются без изменений */
 .contact-container h2 {
     font-size: 32px;
     color: #ff69b4;
@@ -242,29 +230,6 @@ body {
     background: #ff4081;
     transform: scale(1.05);
 }
-.about {
-    background: #1e1e1e;
-    padding: 60px;
-    max-width: 1200px;
-    margin: 40px auto;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 105, 180, 0.5);
-}
-
-.about h2 {
-    font-size: 30px;
-    color: #ff69b4;
-    margin-bottom: 45px;
-    
-}
-
-.about p {
-    font-size: 18px;
-    color: #ccc;
-    line-height: 1.6;
-}
 /* Стили контейнера услуги */
 .service-container {
     max-width: 900px;
@@ -306,153 +271,24 @@ body {
     border-radius: 8px;
 }
 
-/* Карусель */
-.carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    gap: 15px; /* Отступы между изображениями */
     max-width: 600px;
     margin: 20px auto;
 }
 
-.carousel-track {
-    display: flex;
-    gap: 15px;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Стили для картинок */
-.carousel img {
-    width: 250px; /* Увеличиваем размер фото */
-    max-height: 180px; /* Делаем высоту адаптивной */
-    object-fit: cover; /* Фото не будет растягиваться */
+.gallery img {
+    width: 100%; /* Делаем изображения адаптивными */
+    height: auto;
     border-radius: 10px;
-    border: 3px solid transparent;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
-
-.carousel img:hover {
-    border-color: #ff69b4;
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
-    transform: scale(1.1);
+.gallery img:hover {
+    transform: scale(1.05); /* Небольшое увеличение при наведении */
 }
-
-/* Кнопки управления каруселью для #wash*/
-#wash .prev-btn,#wash .next-btn {
-    position: absolute;
-    top: 75%;
-    transform: translateY(-50%);
-    background: #ff69b4;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    z-index: 10;
-}
-
-
-#wash .prev-btn:hover, #wash .next-btn:hover {
-    background: #ff4081;
-}
-
-#wash .prev-btn { left: 600px; }
-#wash .next-btn { right: 610px; }
-/* Кнопки управления каруселью для #polish*/
-#polish .prev-btn,#polish .next-btn {
-    position: absolute;
-    top: 75%;
-    transform: translateY(-50%);
-    background: #ff69b4;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    z-index: 10;
-}
-
-
-#polish .prev-btn:hover, #polish .next-btn:hover {
-    background: #ff4081;
-}
-
-#polish .prev-btn { left: 600px; }
-#polish .next-btn { right: 610px; }
-/* Кнопки управления каруселью для #ceramic*/
-#ceramic .prev-btn,#ceramic .next-btn {
-    position: absolute;
-    top: 71%;
-    transform: translateY(-50%);
-    background: #ff69b4;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    z-index: 10;
-}
-
-
-#ceramic .prev-btn:hover, #ceramic .next-btn:hover {
-    background: #ff4081;
-}
-
-#ceramic .prev-btn { left: 600px; }
-#ceramic .next-btn { right: 610px; }
-/* Кнопки управления каруселью для #chemyinter*/
-#chemyinter .prev-btn,#chemyinter .next-btn {
-    position: absolute;
-    top: 77%;
-    transform: translateY(-50%);
-    background: #ff69b4;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    z-index: 10;
-}
-
-
-#chemyinter .prev-btn:hover, #chemyinter .next-btn:hover {
-    background: #ff4081;
-}
-
-#chemyinter .prev-btn { left: 600px; }
-#chemyinter .next-btn { right: 610px; }
-/* Кнопки управления каруселью для #graviy*/
-#graviy .prev-btn,#graviy .next-btn {
-    position: absolute;
-    top: 79%;
-    transform: translateY(-50%);
-    background: #ff69b4;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    z-index: 10;
-}
-
-
-#graviy .prev-btn:hover, #graviy .next-btn:hover {
-    background: #ff4081;
-}
-
-#graviy .prev-btn { left: 600px; }
-#graviy .next-btn { right: 610px; }
 /* Стиль кнопки "Назад" */
 .back-btn {
     display: inline-block;
@@ -481,6 +317,13 @@ body {
 
     /* Главный контейнер */
     .main-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    .sections-container {
         flex-direction: column;
         align-items: center;
         width: 100%;
