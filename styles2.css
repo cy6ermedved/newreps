@@ -1,4 +1,4 @@
-/* Общий стиль */
+
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +14,6 @@ body {
     overflow-x: hidden;    
 }
 
-/* Контейнер для всей страницы */
 .main-container {
     display: flex;
     width: 100%;
@@ -33,8 +32,6 @@ body {
     height: auto;
 }
 
-
-/* Стили для бокового меню */
 .sidebar {
     width: 350px;
     background: #1e1e1e;
@@ -81,7 +78,6 @@ body {
     box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
 }
 
-/* Стили секции HERO */
 .hero {
     flex-grow: 1;
     display: flex;
@@ -90,7 +86,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 100px 20px;
-    background: url('../myworks/photo_cyberdetailing/phhead.png') center/cover no-repeat; /* Укажи свой файл */
+    background: url('../myworks/photo_cyberdetailing/phhead.png') center/cover no-repeat; 
     border-radius: 10px;
     margin-left: 20px;
     width: 100%;
@@ -126,28 +122,26 @@ body {
     background-color: #ff4090;
     transform: scale(1.05);
 }
-/* Стили для контейнера двух секций */
+
 .sections-container {
-    display: flex; /* Включаем Flexbox */
+    display: flex; 
     justify-content: space-between;
-    gap: 40px; /* Расстояние между секциями */
-    max-width: 1400px; /* Ограничение общей ширины контейнера */
-    margin: 40px auto; /* Центрирование контейнера */
-    flex-wrap: wrap; /* Если экран узкий, секции переносятся */
+    gap: 40px; 
+    max-width: 1400px; 
+    margin: 40px auto; 
+    flex-wrap: wrap; 
 }
 
-/* Стили для секции Contact */
 .contact {
     padding: 50px 20px;
     text-align: center;
     background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
     border-radius: 10px;
-    max-width: 600px; /* Сохраняем фиксированную ширину */
+    max-width: 600px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 105, 180, 0.5);
 }
 
-/* Стили для секции About */
 .about {
     background: #1e1e1e;
     padding: 60px;
@@ -170,7 +164,6 @@ body {
     line-height: 1.8;
 }
 
-/* Остальные стили для contact остаются без изменений */
 .contact-container h2 {
     font-size: 32px;
     color: #ff69b4;
@@ -230,7 +223,7 @@ body {
     background: #ff4081;
     transform: scale(1.05);
 }
-/* Стили контейнера услуги */
+
 .service-container {
     max-width: 900px;
     margin: 40px auto;
@@ -241,7 +234,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Заголовки */
+
 .service-container h1 {
     color: #ff69b4;
     font-size: 28px;
@@ -254,7 +247,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Стили цен */
 .service-prices {
     list-style: none;
     padding: 0;
@@ -273,23 +265,23 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Два столбца */
-    gap: 15px; /* Отступы между изображениями */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
     max-width: 600px;
     margin: 20px auto;
 }
 
 .gallery img {
-    width: 100%; /* Делаем изображения адаптивными */
+    width: 100%; 
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Небольшое увеличение при наведении */
+    transform: scale(1.05); 
 }
-/* Стиль кнопки "Назад" */
+
 .back-btn {
     display: inline-block;
     margin-top: 20px;
@@ -308,14 +300,13 @@ body {
     transform: scale(1.05);
 }
 @media (max-width: 768px) {
-    /* Исправляем фон */
+    
     body {
         background: url('../myworks/photo_cyberdetailing/backgr.jpg') center/cover no-repeat fixed;
         background-attachment: fixed;
         margin: auto;
     }
 
-    /* Главный контейнер */
     .main-container {
         flex-direction: column;
         align-items: center;
@@ -331,17 +322,15 @@ body {
         gap: 20px;
     }
 
-    /* Логотип */
     .logo {
         position: relative;
-        z-index: 10; /* Логотип всегда сверху */
+        z-index: 10; 
     }
 
     .logo img {
         max-width: 250px;
     }
 
-    /* Сайдбар */
     .sidebar {
         width: 80%;
         max-width: 350px;
@@ -351,7 +340,6 @@ body {
         margin: 2px;
     }
 
-    /* Hero */
     .hero {
         padding: 40px 15px;
         min-height: auto;
@@ -364,7 +352,6 @@ body {
         font-size: 32px;
     }
 
-    /* Секция "О нас" */
     .about {
         width: 60%;
         max-width: 600px;
@@ -372,7 +359,6 @@ body {
         text-align: center;
     }
 
-    /* Список услуг */
     .service-list {
         display: flex;
         flex-direction: column;
@@ -387,7 +373,6 @@ body {
         max-width: 500px;
     }
 
-    /* Контактная форма */
     .contact {
         width: 80%;
         max-width: 500px;
@@ -398,7 +383,6 @@ body {
     .contact input, .contact textarea, .contact button {
         width: 100%;
     }
-        /* Контейнер услуг */
         .service-container {
             width: 80%;
             max-width: 600px;
@@ -407,7 +391,6 @@ body {
             padding: 30px 15px;
         }
     
-        /* Заголовки и текст */
         .service-container h1 {
             font-size: 24px;
         }
@@ -416,12 +399,10 @@ body {
             font-size: 16px;
         }
     
-        /* Цены */
         .service-prices {
             font-size: 16px;
         }
     
-        /* Карусель */
         .carousel {
             max-width: 100%;
         }
@@ -438,7 +419,6 @@ body {
             border-radius: 8px;
         }
     
-        /* Кнопки карусели */
         .prev-btn, .next-btn {
             top: 50%;
             transform: translateY(-50%);
@@ -448,8 +428,7 @@ body {
     
         .prev-btn { left: 5px; }
         .next-btn { right: 5px; }
-    
-        /* Кнопка "Назад" */
+        
         .back-btn {
             display: block;
             width: 80%;
