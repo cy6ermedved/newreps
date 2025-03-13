@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('../myworks/photo_cyberdetailing/backgr.jpg') center/cover no-repeat fixed;
+    background: url('../newreps/photo_cyberdetailing/backgr.jpg') center/cover no-repeat fixed;
     background-attachment: fixed;
     max-width: 100%;
     overflow-x: hidden;    
@@ -86,7 +86,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 100px 20px;
-    background: url('../myworks/photo_cyberdetailing/phhead.png') center/cover no-repeat; 
+    background: url('../newreps/photo_cyberdetailing/phhead.png') center/cover no-repeat; 
     border-radius: 10px;
     margin-left: 20px;
     width: 100%;
@@ -302,7 +302,7 @@ body {
 @media (max-width: 768px) {
     
     body {
-        background: url('../myworks/photo_cyberdetailing/backgr.jpg') center/cover no-repeat fixed;
+        background: url('../newreps/photo_cyberdetailing/backgr.jpg') center/cover no-repeat fixed;
         background-attachment: fixed;
         margin: auto;
     }
