@@ -1,0 +1,471 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('../myworks/photo_massagesaloon/backgr.jpg');
+    background-size: cover; /* Щоб фото розтягнулося на весь екран */
+    background-position: center; /* Центрування фото */
+    background-repeat: no-repeat; /* Без повторення */
+    color: #333;
+}
+
+header {
+    background-color: #f0d4a9;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 1px 1px 10px 10px #c79b58;
+}
+.logo {
+    width: 250px; /* Ширина логотипу, налаштуйте за потребою */
+    height: auto; /* Зберігає пропорції */
+    display: block; /* Щоб логотип був окремим блоком */
+    margin: 0 auto 20px; /* Центрування і відступ знизу */
+}
+
+h1 {
+    color: #2e8b57;
+    font-size: 35px;
+}
+
+h2 {
+    color: #2e8b57;
+    margin-bottom: 35px;
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    font-size: large;
+}
+
+/* Массажи */
+.massage-types {
+    padding: 40px;
+}
+
+.massage-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.massage-card {
+    background-color: #f0f7f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-decoration: none; /* Убираем подчёркивание ссылки */
+    color: #333; /* Цвет текста */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход для эффектов */
+}
+
+.massage-card:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Подсветка тенью */
+}
+
+.massage-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.massage-card h3 {
+    color: #2e8b57;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 60px auto;
+}
+/* О нас */
+.about {
+    flex: 1; /* все секции одинаковой ширины */
+    padding: 40px;
+    text-align: center;
+    background-color: #f0f7f0; /* общий фон для согласованности */
+    border-radius: 8px; /* скруглённые углы */
+    box-shadow: 1px 1px 10px 5px #c79b58;
+    min-width: 0; /* предотвращает переполнение содержимого */
+}
+
+/* Местоположение */
+.location {
+    flex: 1.5; /* делаем шире, чтобы карта была заметнее */
+    padding: 40px;
+    text-align: center;
+    background-color: #f0f7f0;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px 5px #c79b58;
+    min-width: 0;
+}
+
+.location iframe {
+    max-width: 100%;
+    width: 100%; /* растягиваем на всю доступную ширину секции */
+    height: 500px; /* увеличиваем высоту карты для заметности */
+    border-radius: 10px;
+    border: 2px solid #2e8b57; /* рамка в тон заголовков */
+}
+
+/* Форма */
+.contact-form {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    background: #f0f7f0;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px 5px #c79b58;
+    min-width: 0;
+    transition: transform 0.3s ease; /* анимация при наведении */
+}
+
+.contact-form h2 {
+    color: #2e8b57;
+    margin-bottom: 70px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 20px;
+    border: 1px solid #2e8b57; /* рамка в тон сайта */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box; /* чтобы padding не увеличивал ширину */
+}
+
+.contact-form textarea {
+    resize: vertical; /* только вертикальное изменение размера */
+}
+
+.contact-form button {
+    background-color: #2e8b57;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* тень для кнопки */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #1f6b3d;
+    transform: scale(1.05); /* лёгкое увеличение */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #2e8b57;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1f6b3d;
+}
+
+/* Контакты */
+.contacts {
+        padding: 20px;
+        background-color: #d4e4d4;
+        box-shadow: 1px 1px 10px 5px #c79b58;
+        text-align: center; /* для заголовка */
+    }
+.contacts h2 {
+    text-align: center;
+    font-size: 20px;
+}
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+    background-color: #2e8b57; /* цвет кнопки как у сайта */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* убираем подчёркивание */
+    transition: background-color 0.3s;
+    width: 250px;
+}
+.contact-btn:hover {
+    background-color: #1f6b3d; /* темнее при наведении */
+}
+.contact-btn img, .contact-btn i {
+    width: 20px; /* размер иконки */
+    height: 20px;
+}
+.massage-details {
+    padding: 40px;
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: #f0f7f0; /* как у карточек */
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 5px #c79b58; /* тень как у секций */
+    text-align: center;
+}
+.massage-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.back-btn {
+    display: inline-block;
+    background-color: #2e8b57;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.back-btn:hover {
+    background-color: #1f6b3d;
+}
+
+.contact-form-details h2 {
+    color: #2e8b57;
+    margin-bottom: 40px; /* Уменьшенный отступ для компактности */
+}
+
+.contact-form-details input,
+.contact-form-details textarea {
+    padding: 15px;
+    border: 1px solid #2e8b57;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form-details textarea {
+    resize: vertical;
+}
+
+.contact-form-details button {
+    background-color: #2e8b57;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form-details button:hover {
+    background-color: #1f6b3d;
+    transform: scale(1.05);
+}
+
+.contact-form-details form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Уменьшенный gap для компактности */
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Стили для кнопки "Повернутися на головну" */
+.massage-details .back-btn {
+    margin-top: 30px; /* Отступ сверху от формы */
+    display: block; /* Для центрирования */
+    width: fit-content; /* Ширина по содержимому */
+    margin-left: auto;
+    margin-right: auto;
+}
+.price {
+display: flex;
+justify-content: center;
+padding: 10px;
+gap: 30px;
+flex-wrap: wrap;
+margin-top: -40px;
+}
+.price p {
+    display: flex;
+    align-items: center;
+    background-color: #2e8b57;
+    color: white;
+    width: 200px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    /* Шапка */
+    header {
+        padding: 10px;
+    }
+    .logo {
+        width: 200px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    /* Массажи */
+    .massage-types {
+        padding: 20px;
+    }
+    .massage-grid {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        max-width: 100%;
+        padding: 0;
+    }
+    .massage-card {
+        width: 90%;
+        max-width: 400px;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* Контейнер */
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 15px;
+        margin: 20px auto;
+        max-width: 100%;
+    }
+    .about, .location, .contact-form {
+        width: 90%;
+        padding: 20px;
+        margin-bottom: 0;
+        flex: none;
+    }
+    .location iframe {
+        height: 300px;
+    }
+    form {
+        gap: 20px;
+        max-width: 100%;
+    }
+    .contact-form input, .contact-form textarea {
+        padding: 15px;
+    }
+    .contact-form h2 {
+        margin-bottom: 30px;
+    }
+
+    /* Футер */
+    .contacts {
+        padding: 15px;
+    }
+    .contact-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .contact-btn {
+        width: 90%;
+        max-width: 300px;
+        padding: 8px 15px;
+    }
+        .massage-details {
+            padding: 20px;
+            margin: 30px;
+        }
+        
+        .massage-img {
+            max-width: 100%; /* Уменьшаем изображение на малых экранах */
+        }
+        
+        .contact-form-details {
+            padding: 15px;
+        }
+        
+        .contact-form-details input,
+        .contact-form-details textarea {
+            padding: 10px;
+        }
+        
+        .contact-form-details button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        
+        .contact-form-details form {
+            gap: 15px;
+        }
+        
+        .massage-details .back-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .price {
+            gap: 5px;
+        }
+    
+}
+
+@media (max-width: 480px) {
+    .location iframe {
+        height: 200px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+ 
+        .massage-details h2 {
+            font-size: 24px;
+        }
+        
+        .contact-form-details h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .massage-img {
+            max-width: 90%;
+        }
+    
+}

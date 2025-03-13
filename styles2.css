@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url('backgr.jpg') center/cover no-repeat fixed;
+    background: url('../myworks/photo_cyberdetailing/backgr.jpg') center/cover no-repeat fixed;
     background-attachment: fixed;
     max-width: 100%;
     overflow-x: hidden;    
@@ -90,7 +90,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 100px 20px;
-    background: url('phhead.png') center/cover no-repeat; /* Укажи свой файл */
+    background: url('../myworks/photo_cyberdetailing/phhead.png') center/cover no-repeat; /* Укажи свой файл */
     border-radius: 10px;
     margin-left: 20px;
     width: 100%;
@@ -310,7 +310,7 @@ body {
 @media (max-width: 768px) {
     /* Исправляем фон */
     body {
-        background: url('backgr.jpg') center/cover no-repeat fixed;
+        background: url('../myworks/photo_cyberdetailing/backgr.jpg') center/cover no-repeat fixed;
         background-attachment: fixed;
         margin: auto;
     }
